@@ -1,26 +1,25 @@
 import pandas as pd
+import random
 
-data = pd.read_csv("blackjack.csv")
+playing = True
 
-def blackJackForward(playerTotal, DealerCard, playerCards):
-    if playerTotal >= 17:
-        return "stand"
-    elif playerTotal >= 11:
-        return "hit"
-    elif playerTotal == 11 and DealerCard < 10:
-        return "double down"
-    elif playerTotal in [11, 12, 13, 14, 15, 16] and DealerCard >= 7:
-        return "hit"
-    elif playerTotal == 10 and DealerCard < 10:
-        return "double down"
-    elif len(playerCards) == 2 and playerCards[0] == playerCards[1]:
-        if playerCards[0] in [8, 11]:
-            return "split"
-    return "stand"
+card1 = random.randint(1,10)
+card2 = random.randint(1,10)
+print("Your cards are: ", card1,"and",card2)
+dealercard = random.randint(1,10)
+cardTotal = card1 + card2
 
-action = blackJackForward(playerTotal, DealerCard ,playerCards)
-print(f"The recommended action is: {action}")
+while playing:
+    if cardTotal >= 17:
+        print("Stand")
+        playing = False
+    elif cardTotal >= 11:
+        print("hit")
+        card3 = random.randint(1,10)
+        cardTotal = cardTotal + card3
+    elif 11 >= cardTotal >= 16:
+        if dealercard >= 7:
+            print("hit")
+            card3 = random.randint(1,10)
+            cardTotal = cardTotal + card3
 
-data['recommended action'] = data.apply(lambda row: blackJackForward(row['playerTotal'], row['dealerCard'], axis=1))
-
-print(data[['playerTotal'],['dealerCard'],['recommended action']])
