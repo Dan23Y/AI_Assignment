@@ -20,3 +20,7 @@ def blackJackForward(playerTotal, DealerCard, playerCards):
 
 action = blackJackForward(playerTotal, DealerCard ,playerCards)
 print(f"The recommended action is: {action}")
+
+data['recommended action'] = data.apply(lambda row: blackJackForward(row['playerTotal'], row['dealerCard'], axis=1))
+
+print(data[['playerTotal'],['dealerCard'],['recommended action']])
