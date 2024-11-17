@@ -22,4 +22,6 @@ while playing:
             print("hit")
             card3 = random.randint(1,10)
             cardTotal = cardTotal + card3
+    elif cardTotal > 21:
+        print("bust")
 
