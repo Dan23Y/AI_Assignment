@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d2573b5-470f-47aa-b75a-dd4082b7a31f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AI_Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AI_Assignment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1-Artifical-Intelligence.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task1-Artifical-Intelligence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackwardChain.py" beforeDir="false" afterPath="$PROJECT_DIR$/BackwardChain.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,18 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Dan23Y"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Dan23Y&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Dan23Y/AI_Assignment.git",
-    "accountId": "218f2984-1797-4409-bf1c-49c9c1982be8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Dan23Y/AI_Assignment.git&quot;,
+    &quot;accountId&quot;: &quot;218f2984-1797-4409-bf1c-49c9c1982be8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -73,6 +68,7 @@
       <updated>1732035376482</updated>
       <workItem from="1732035377504" duration="3490000" />
       <workItem from="1732053343865" duration="6000" />
+      <workItem from="1732054201322" duration="11000" />
     </task>
     <servers />
   </component>

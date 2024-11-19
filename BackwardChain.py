@@ -1,61 +1,67 @@
 import random
 
-playing = True
-dealerplay = True
+stood = False
+dealerStood = False
 
-card1 = random.randint(1,10)
-card2 = random.randint(1,10)
-print("Your cards are: ", card1,"and",card2)
-dealercard = random.randint(1,10)
-print("The dealers card is ", dealercard)
-cardTotal = card1 + card2
-print("The total of players cards is" , cardTotal)
+playerCard1 = random.randint(1,10)
+playerCard2 = random.randint(1,10)
+print("Your cards are ", playerCard1, playerCard2)
+playerTotal = playerCard1 + playerCard2
+print("Your total is", playerTotal)
 
-while playing and cardTotal < 22:
-    if cardTotal >= 17:
-        print("Stand", cardTotal)
-        playing = False
-    elif cardTotal <= 11:
-        print("hit")
-        card3 = random.randint(1,10)
-        cardTotal = cardTotal + card3
-        print(cardTotal)
-    elif 11 <= cardTotal <= 16:
-        if dealercard >= 7:
-            print("hit")
-            card3 = random.randint(1,10)
-            cardTotal = cardTotal + card3
-            print(cardTotal)
-        else:
+dealercard1 = random.randint(1,10)
+print("Dealer card is ", dealercard1)
+
+while not stood:
+    if playerTotal <= 21:
+        if playerTotal >= 17:
             print("stand")
-            playing = False
-    elif  cardTotal > 21:
+            stood = True
+        elif playerTotal <= 11:
+            print("hit")
+            playerCard3 = random.randint(1,10)
+            print("card is" , playerCard3)
+            playerTotal = playerTotal + playerCard3
+            print("total is", playerTotal)
+        elif 11 < playerTotal < 17:
+            if dealercard1 < 7:
+                print("hit")
+                playerCard4 = random.randint(1,10)
+                print("card is" , playerCard4)
+                playerTotal = playerTotal + playerCard4
+                print("total is" , playerTotal)
+            else:
+                print("stand")
+                stood = True
+    else:
         print("bust")
-        playing = False
+        stood = True
 
 dealercard2 = random.randint(1,10)
-dealerTotal = dealercard2 + dealercard
-print("The dealers card is ", dealercard2)
-print("The dealers total is", dealerTotal)
-while dealerplay:
-    if dealerTotal > 21:
-        print("bust")
-        dealerplay = False
-    elif dealerTotal < 17:
-        print("hit")
-        dealercard3 = random.randint(1,10)
-        dealerTotal = dealerTotal + dealercard3
-        print("The dealers total is", dealerTotal)
-    elif 17 <= dealerTotal <= 21:
-        print("stand")
-        print(dealerTotal)
-        dealerplay = False
+dealerTotal = dealercard1 + dealercard2
+print("Dealers total is ", dealerTotal)
 
-if dealerTotal == 21 and cardTotal == 21:
-    print("The dealer Wins")
-elif 22 > cardTotal > dealerTotal:
-     print("player wins")
-elif 22 > dealerTotal > cardTotal:
-    print("The dealer Wins")
-elif cardTotal > 21 and dealerTotal > 21:
-    print("both bust")
+while not dealerStood:
+    if dealerTotal <= 21:
+        if dealerTotal > 17:
+            print("stand")
+            dealerStood = True
+        else:
+            print("hit")
+            dealercard3 = random.randint(1,10)
+            dealerTotal = dealerTotal + dealercard3
+            print("Dealer total is ", dealerTotal)
+    else:
+        print("bust")
+
+if playerTotal > 21 >= dealerTotal:
+    print("dealer wins")
+elif playerTotal <= 21 < dealerTotal:
+    print("player wins")
+elif playerTotal == dealerTotal:
+    print("dealer wins")
+elif dealerTotal < playerTotal <= 21:
+    print("player wins")
+elif playerTotal < dealerTotal <= 21:
+    print("dealer wins")
+
