@@ -53,6 +53,7 @@ while not dealerStood:
             print("Dealer total is ", dealerTotal)
     else:
         print("bust")
+        dealerStood = True
 
 if playerTotal > 21 >= dealerTotal:
     print("dealer wins")
@@ -64,4 +65,3 @@ elif dealerTotal < playerTotal <= 21:
     print("player wins")
 elif playerTotal < dealerTotal <= 21:
     print("dealer wins")
-
