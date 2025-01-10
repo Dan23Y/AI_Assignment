@@ -53,7 +53,7 @@ while not dealerStood:
             print("Dealer total is ", dealerTotal)
     else:
         print("bust")
-        dealerStood = True
+        dealerStood = Truetg
 
 if playerTotal > 21 >= dealerTotal:
     print("dealer wins")
