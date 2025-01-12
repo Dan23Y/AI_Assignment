@@ -26,7 +26,7 @@ X = df[['year']]
 y = df['value']
 
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
 
 
 model = LinearRegression()
@@ -46,7 +46,7 @@ print(f"Mean Squared Error (MSE): {mse:.2f}")
 print(f"R-squared (R²): {r2:.2f}")
 
 
-future_year = np.array([[2040]])  
+future_year = np.array([[2020]])  
 future_prediction = model.predict(future_year)
 
 print(f"\nPredicted EV stock for the year {future_year[0][0]}: {future_prediction[0]:.2f}")
